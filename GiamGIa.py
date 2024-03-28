@@ -4,12 +4,11 @@ def GiamGia(a , b):
         return -1
     if a <= 120 and b <= 6:
         return 100
-    if a >120 and b >= 6:
-        return 0
-    if a <= 120 and b > 6:
-        return 50
     if a > 120 and b <= 6:
         return 70
+    if a <= 120 and b > 6:
+        return 50
+    return 0
     
 class GiamGiaTestBien(unittest.TestCase):
     def test_giam_gia_1(self):
@@ -73,22 +72,22 @@ class GiamGiaTestBangQD(unittest.TestCase):
 
 class GiamGiaTestC2(unittest.TestCase):
     def test_giam_gia_1(self):
-        result = GiamGia(110,5)
-        self.assertEqual(result, 100)
+        result = GiamGia(-2,-2)
+        self.assertEqual(result, -1)
 
     def test_giam_gia_2(self):
-        result = GiamGia(110,7)
-        self.assertEqual(result, 50)
+        result = GiamGia(119,5)
+        self.assertEqual(result, 100)
         
     def test_giam_gia_3(self):
-        result = GiamGia(122,5)
+        result = GiamGia(121,5)
         self.assertEqual(result, 70)
 
     def test_giam_gia_4(self):
-        result = GiamGia(121,8)
-        self.assertEqual(result, 0)
+        result = GiamGia(119,70)
+        self.assertEqual(result, 50)
     def test_giam_gia_5(self):
-        result = GiamGia(122,9)
+        result = GiamGia(121,7)
         self.assertEqual(result, 0)
 if __name__ =='__main__':
     unittest.main()
