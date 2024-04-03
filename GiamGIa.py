@@ -31,19 +31,19 @@ class GiamGiaTestBien(unittest.TestCase):
         result = GiamGia(119, 100)
         self.assertEqual(result, 50)
 
-    def test_giam_gia_5(self):
+    def test_giam_gia_6(self):
         result = GiamGia(30,7)
         self.assertEqual(result, 50)
 
-    def test_giam_gia_5(self):
+    def test_giam_gia_7(self):
         result = GiamGia(31, 7)
         self.assertEqual(result, 50)
 
-    def test_giam_gia_5(self):
+    def test_giam_gia_8(self):
         result = GiamGia(199,7)
         self.assertEqual(result, 0)
 
-    def test_giam_gia_5(self):
+    def test_giam_gia_9(self):
         result = GiamGia(200,7)
         self.assertEqual(result, 0)
 
@@ -89,6 +89,11 @@ class GiamGiaTestC2(unittest.TestCase):
     def test_giam_gia_5(self):
         result = GiamGia(121,7)
         self.assertEqual(result, 0)
+
+    class GiamGiaTestAllUse(unittest.TestCase):
+        def test_giam_gia_1(self):
+            result = GiamGia(122,9)
+            self.assertEqual(result,0)
 if __name__ =='__main__':
     unittest.main()
 
